@@ -53,11 +53,11 @@ type Writer interface {...}
 type tokenIssuer interface {...}
 ```
 
-For more complex interfaces many languages prefer the 'I' (or 'i' for non exported types) convention:
+For more complex interfaces many languages prefer the 'I' convention (or 'i' for non exported types in Go):
 
 ```go
 type IZendeskAPI interface {...}
-type IPlaytechIE  interface {...}
+type IDatabaseClient  interface {...}
 
 type iRobotClient interface {...}
 ```
@@ -84,7 +84,7 @@ import(
 )
 ```
 
-If multiple words need to be used in a package name/directory prefer `-` as a separator:
+If multiple words need to be used in a package name/directory `-` should be used as a separator:
 
 ```go
 import redis "github.com/redis/go-redis/v9"
@@ -94,7 +94,7 @@ import redis "github.com/redis/go-redis/v9"
 
 ***Snake case***
 
-File names should consist of a single word. In case of two or more words use `_` as a separator:
+File names should consist of a single word. In case of two or more words `_` should be used as a separator:
 
 ```go
 client.go
@@ -116,7 +116,7 @@ var (
 
 ### Constants
 
-***All upper snake case***
+***All upper kebab case***
 
 ```go
 var(
